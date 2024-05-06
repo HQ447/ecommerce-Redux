@@ -1,0 +1,29 @@
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.nav-login-cart button {
+  width: 106px;
+  height: 36px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 75px;
+  color: #515151;
+  font-size: 14px;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+}
+
+.nav-login-cart button:active {
+  background: #f3f3f3;
+}
+
+.nav-bg {
+  background-color: rgb(255 228 228);
+}

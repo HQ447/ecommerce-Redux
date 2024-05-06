@@ -1,0 +1,33 @@
+.boxShadow {
+  box-shadow: 0px 0px 17px -5px #2e2d2d;
+}
+
+input {
+  /* background-color: rgb(232 240 254); */
+
+  border: 1px solid rgb(205, 205, 205);
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+.dark {
+  background-color: rgb(0 0 0 / 60%);
+}
+
+.table,
+tr,
+td {
+  border: 1px solid grey !important;
+  /* background-color: aliceblue; */
+}
+td {
+  padding: 9px;
+}
+
+.last-tr {
+  /* border: 3px solid !important; */
+  background: rgb(199, 199, 199);
+  color: rgb(49, 49, 49);
+}
