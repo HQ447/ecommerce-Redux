@@ -23,7 +23,7 @@ function DisplayProduct({ setDisplay }) {
   }
 
   return (
-    <div className="display  w-full h-screen dark flex justify-center items-center fixed z-30">
+    <div className="display  w-full h-screen dark flex justify-center items-center fixed z-40">
       <div className="box boxShadow -xl:w-2/3 -lg:w-3/4 -md:w-4/5 -sm:w-11/12  flex w-2/4 -md:py-2 -md:px-4 p-6 -sm:p-4 bg-white rounded-md relative">
         <RxCross2
           className="text-3xl absolute top-2 right-3 cursor-pointer"
@@ -64,7 +64,6 @@ function DisplayProduct({ setDisplay }) {
           </div>
         ))}
       </div>
-      {/* <ToastContainer position="top-centxer" autoClose={2000} /> */}
     </div>
   );
 }

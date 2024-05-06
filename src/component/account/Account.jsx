@@ -3,7 +3,7 @@ import "../component.css";
 
 function Account({ setshowAccount }) {
   return (
-    <div className="checkout fixed w-full h-screen flex justify-center items-center dark z-30 ">
+    <div className="checkout fixed w-full h-screen flex justify-center items-center dark z-40 ">
       <div className="flex  bg-white flex-col gap-4 py-16 px-10 -xsm:px-7  w-2/3 -lg:w-4/5 -md:w-11/12 relative">
         <RxCross2
           className=" absolute top-4 right-5 text-3xl cursor-pointer"

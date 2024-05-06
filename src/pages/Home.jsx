@@ -24,26 +24,6 @@ function Home() {
           </button>
         </NavLink>
       </div>
-      {/* <div className="flex w-96 gap-6 overflow-x-auto  bg-red-400 ">
-        {Data.filter((obj) => {
-          if (obj.top !== true) {
-            return obj;
-          }
-        }).map((obj) => {
-          return (
-            <div key={obj.id} className="flex p-3 bg-white rounded-md ">
-              <div className="flex flex-col ">
-                <img src={obj.image} alt="" className=" w-20 h-20" />
-                <h1>{obj.name}</h1>
-                <h1 className="text-red-600">
-                  <del>{obj.old_price}</del>
-                </h1>
-                <h1>{obj.new_price}</h1>
-              </div>
-            </div>
-          );
-        })}
-      </div> */}
     </div>
   );
 }

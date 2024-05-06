@@ -22,8 +22,6 @@ function Cart({ setCheckout }) {
   const devliveryCharges = useSelector((state) => state.cart.devliveryCharges);
 
   function removeItem(id) {
-    // let arr = cart.filter((item) => item.id !== id);
-    // // dispatch(addToCart(arr));
     dispatch(removeFromCart(id));
     handleTotalPrice();
   }
@@ -115,7 +113,6 @@ function Cart({ setCheckout }) {
             <h1 className="text-lg font-bold">ITEMS {cart.length}</h1>
             <h1 className="font-bold">$ {grandTotal}</h1>
           </div>
-          {/* <hr className="line" /> */}
 
           <div className="flex flex-col  gap-4">
             <h1 className="font-bold text-lg">SHIPPING</h1>
@@ -138,11 +135,6 @@ function Cart({ setCheckout }) {
               placeholder="Enter Your Code"
             />
           </div>
-          {/* <div className="flex w-full justify-between my-3">
-          <h1>Shipping Charges</h1>
-          <h1>$ {shippingCharges}</h1>
-        </div> */}
-          {/* <hr className="line" /> */}
 
           <div className="flex flex-col gap-4 mt-20">
             <div className="flex w-full text-xl font-bold  justify-between">

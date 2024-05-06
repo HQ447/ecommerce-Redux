@@ -6,7 +6,6 @@ import { useState } from "react";
 import { FaRegAddressCard } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
-import { FaCity } from "react-icons/fa6";
 
 function Checkout({ setCheckout, setInvoice }) {
   const [name, setName] = useState("");
@@ -22,23 +21,21 @@ function Checkout({ setCheckout, setInvoice }) {
       address: address,
     };
     dispatch(updateFormData(formData));
-    // Optionally, you can reset the form fields here
     setName("");
     setEmail("");
     setAddress("");
-    // Navigate to next step or perform any other action
     setCheckout(false);
     setInvoice(true);
   };
 
   return (
-    <div className="checkout fixed w-full h-screen flex justify-center items-center dark z-30 ">
+    <div className="checkout fixed w-full h-screen -xsm:h-full flex justify-center items-center dark z-40 ">
       <form
         action="#"
         onSubmit={handleFormSubmit}
         className="w-full flex justify-center"
       >
-        <div className="flex  bg-white flex-col gap-4 p-8 -md:p-5 w-3/4 -lg:w-5/6 -md:w-11/12  relative">
+        <div className="flex  bg-white flex-col gap-4 p-8 -xsm:p-6 -md:p-5 w-3/4 -lg:w-5/6 -md:w-11/12  relative">
           <RxCross2
             className=" absolute top-4 right-5 text-3xl cursor-pointer"
             onClick={() => setCheckout(false)}
@@ -47,7 +44,7 @@ function Checkout({ setCheckout, setInvoice }) {
             Checkout Form
           </h1>
           <div className="box -sm:flex-wrap  flex gap-1">
-            <div className="left w-2/4 -sm:w-full    flex flex-col px-8 -md:px-3  gap-3">
+            <div className="left w-2/4 -sm:w-full  flex flex-col px-8 -md:px-3 gap-3 -xsm:gap-2">
               <h1 className=" font-bold text-xl">Billing Address</h1>
               <div className="flex flex-col gap-1">
                 <span className="  text-gray-600 flex gap-2 items-center">
@@ -60,7 +57,7 @@ function Checkout({ setCheckout, setInvoice }) {
                   onChange={(e) => setName(e.target.value)}
                   name=""
                   id=""
-                  className=" px-3 py-2"
+                  className=" px-3 py-2 -xsm:py-1"
                 />
               </div>
               <div className="flex flex-col gap-1">
@@ -74,7 +71,7 @@ function Checkout({ setCheckout, setInvoice }) {
                   onChange={(e) => setEmail(e.target.value)}
                   name=""
                   id=""
-                  className=" px-3 py-2 bg"
+                  className=" px-3 py-2 -xsm:py-1 bg"
                 />
               </div>
               <div className="flex flex-col gap-1">
@@ -88,7 +85,7 @@ function Checkout({ setCheckout, setInvoice }) {
                   onChange={(e) => setAddress(e.target.value)}
                   name=""
                   id=""
-                  className=" px-3 py-2"
+                  className=" px-3 py-2 -xsm:py-1"
                 />
               </div>
               {/* <div className="flex flex-col gap-1">
@@ -105,7 +102,7 @@ function Checkout({ setCheckout, setInvoice }) {
                 />
               </div> */}
             </div>
-            <div className="right w-2/4 -sm:w-full   flex flex-col px-8 -md:px-3  gap-3">
+            <div className="right w-2/4 -sm:w-full   flex flex-col px-8 -md:px-3  gap-3 -xsm:gap-2">
               <h1 className=" font-bold text-xl">Payment</h1>
               <div className="flex gap-1">
                 <img
@@ -136,7 +133,7 @@ function Checkout({ setCheckout, setInvoice }) {
                   placeholder="john Dev"
                   name=""
                   id=""
-                  className=" px-3 py-2"
+                  className=" px-3 py-2 -xsm:py-1"
                   required
                 />
               </div>
@@ -149,7 +146,7 @@ function Checkout({ setCheckout, setInvoice }) {
                   placeholder="1111-2222-3333-4444"
                   name=""
                   id=""
-                  className=" px-3 py-2"
+                  className=" px-3 py-2 -xsm:py-1"
                 />
               </div>
               {/* <div className="flex flex-col gap-1">
@@ -171,7 +168,7 @@ function Checkout({ setCheckout, setInvoice }) {
                     placeholder="2030"
                     name=""
                     id=""
-                    className=" px-3 py-2 w-full"
+                    className=" px-3 py-2 -xsm:py-1 w-full"
                     required
                   />
                 </div>
@@ -182,7 +179,7 @@ function Checkout({ setCheckout, setInvoice }) {
                     placeholder="123"
                     name=""
                     id=""
-                    className=" px-3 py-2 w-full "
+                    className=" px-3 py-2 -xsm:py-1 w-full "
                     required
                   />
                 </div>

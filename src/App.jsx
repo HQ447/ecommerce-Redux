@@ -24,51 +24,6 @@ function App() {
     setshowBadge(false);
   }, 2500);
 
-  // const [subTotal, setSubTotal] = useState(0);
-
-  //subtotal for Invoice it comes form cart component
-  // function total(subtotal) {
-  //   setSubTotal(subtotal);
-  // }
-
-  // function handleDisplayData(obj) {
-  //   setDisplayData([obj]);
-  //   setDisplay(true);
-  // }
-
-  // //increase amount of product
-  // const handleChange = (item, d) => {
-  //   const ind = cart.indexOf(item);
-  //   const arr = cart;
-  //   arr[ind].amount += d;
-
-  //   if (arr[ind].amount === 0) arr[ind].amount = 1;
-  //   setCart([...arr]);
-  // };
-
-  // function addtocart(item) {
-  //   setDisplay(false);
-  //   setDisplayData([]);
-  //   if (cart.indexOf(item) !== -1) return toast.warn("Already added");
-  //   else {
-  //     setCart([...cart, item]);
-  //     toast.success("Your Product is added");
-  //   }
-  // }
-  // function handleCheckoutBtn(name, email, address) {
-  //   if (name && email && address !== "") {
-  //     setUserData({
-  //       name: name,
-  //       email: email,
-  //       address: address,
-  //     });
-  //     setCheckout(false);
-  //     setInvoice(true);
-  //   } else {
-  //     toast.warn("Fill the form");
-  //   }
-  // }
-
   return (
     <div className=" w-full h-screen ">
       {isDisplay ? <DisplayProduct setDisplay={setDisplay} /> : ""}
@@ -91,29 +46,10 @@ function App() {
 
           <Route
             path="/Product"
-            element={
-              <Product
-                // addtocart={addtocart}
-                // searchInp={searchInp}
-                setDisplay={setDisplay}
-                // handleDisplayData={handleDisplayData}
-              />
-            }
+            element={<Product setDisplay={setDisplay} />}
           />
 
-          <Route
-            path="/Cart"
-            element={
-              <Cart
-                // handleDisplayData={handleDisplayData}
-                // cart={cart}
-                // setCart={setCart}
-                // handleChange={handleChange}
-                setCheckout={setCheckout}
-                // total={total}
-              />
-            }
-          />
+          <Route path="/Cart" element={<Cart setCheckout={setCheckout} />} />
         </Routes>
         <ToastContainer position="top-center" autoClose={2000} />
       </div>

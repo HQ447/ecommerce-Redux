@@ -2,6 +2,7 @@ import { useState } from "react";
 import Data from "../component/Assets/Data";
 import Card from "../component/Card/Card";
 import { CiFilter } from "react-icons/ci";
+import { RxCross2 } from "react-icons/rx";
 import "../App.css";
 
 function Product({ setDisplay }) {
@@ -41,6 +42,11 @@ function Product({ setDisplay }) {
           showSidebar ? "-lg:left-2" : ""
         } sidebar -lg:fixed -lg:-left-80 -lg:w-64 -lg:h-screen -lg:z-20 transition-all  box-shadow w-1/4 bg-white rounded-xl gap-3 my-6 py-4 flex flex-col  items-center relative`}
       >
+        <RxCross2
+          className="
+        hidden -lg:flex text-2xl "
+          onClick={() => setshowSidebar(false)}
+        />
         <input
           type="text"
           placeholder="Search Your Item"
@@ -123,7 +129,7 @@ function Product({ setDisplay }) {
         className="flex h-full overflow-auto flex-col items-center -xsm:px-1  py-7 lg:w-full"
         onClick={() => setshowSidebar(false)}
       >
-        <h1 className="pb-8 text-3xl font-bold relative">
+        <h1 className="pb-8 text-3xl -xsm:text-2xl font-bold relative">
           {render()} <span className="span-line text-red-600">products</span>
         </h1>
         <div className="products w-full flex flex-wrap justify-center gap-6">
@@ -165,15 +171,7 @@ function Product({ setDisplay }) {
               return obj;
             }
           }).map((obj) => {
-            return (
-              <Card
-                obj={obj}
-                key={obj.id}
-                // handleDisplayData={handleDisplayData}
-                // addtocart={addtocart}
-                setDisplay={setDisplay}
-              />
-            );
+            return <Card obj={obj} key={obj.id} setDisplay={setDisplay} />;
           })}
         </div>
       </div>
