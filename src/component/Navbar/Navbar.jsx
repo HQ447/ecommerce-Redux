@@ -12,9 +12,9 @@ import { FaUserCircle } from "react-icons/fa";
 function Navbar({ setshowAccount }) {
   const cart = useSelector((state) => state.cart.cart);
 
-  const { user, isAuthenticated } = useAuth0();
-  const { loginWithRedirect } = useAuth0();
-  const { logout } = useAuth0();
+  const { user, isAuthenticated } = useAuth0(); //
+  const { loginWithRedirect } = useAuth0(); //
+  const { logout } = useAuth0(); // authentication will work only in versel , i provided callback url of versel not local host
 
   const [showHiddenMenu, setshowHiddenMenu] = useState(false);
 
@@ -33,7 +33,7 @@ function Navbar({ setshowAccount }) {
             <li onClick={() => setshowHiddenMenu(false)}>Product</li>
           </NavLink>
           <NavLink>
-            <li onClick={() => loginWithRedirect()}>Contact</li>
+            <li onClick={() => loginWithRedirect()}>Login</li>
           </NavLink>
         </ul>
       </div>
@@ -51,7 +51,7 @@ function Navbar({ setshowAccount }) {
           <li>Product</li>
         </NavLink>
         <NavLink className="bg-blue-500 py-2 px-2 rounded-lg text-white">
-          <li onClick={() => loginWithRedirect()}>Contact</li>
+          <li onClick={() => loginWithRedirect()}>Login</li>
         </NavLink>
       </ul>
       <div className="nav-login-cart flex items-center gap-3 ">
@@ -64,7 +64,10 @@ function Navbar({ setshowAccount }) {
             }
           />
         ) : (
-          <FaUserCircle className="text-3xl -xsm:text-2xl" />
+          <FaUserCircle
+            onClick={() => loginWithRedirect()}
+            className="text-3xl -xsm:text-2xl"
+          />
         )}
         <div className="relative">
           <NavLink to={"/cart"}>
