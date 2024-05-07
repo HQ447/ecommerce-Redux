@@ -6,7 +6,7 @@ import "../../App.css";
 function Badge({ setshowBadge }) {
   return (
     <div className="w-100 badge-bg py-3 -xsm:py-2 text-white flex justify-center items-center  ">
-      <span className="flex justify-center items-center text-xl -xsm:text:lg gap-3">
+      <span className="flex justify-center items-center gap-3">
         <FaTruck className="-xsm:text:sm" />
         <h1 className="-xsm:text:sm">Free Delivery for first 3 Orders</h1>
       </span>
